@@ -1,0 +1,6 @@
+{
+  "name": "Park Cities Dental Group",
+  "description": "A luxury, modern, highly sophisticated dental practice serving Dallas, Highland Park, and University Park, presenting premium dental care, cosmetic dentistry, and personalized wellness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  /* Custom palette matching the requested luxury brand positioning */
+  --color-luxury-navy: #0F2940;
+  --color-luxury-teal: #00568c;
+  --color-luxury-gold: #0076be;
+  --color-luxury-gold-light: #1ea5fc;
+  --color-luxury-bg: #FAFAF8;
+  --color-luxury-dark: #111827;
+  --color-luxury-gray: #6B7280;
+  --color-luxury-light: #F2F4F5;
+  --color-luxury-ivory: #FFFDF9;
+
+  /* Shadows and visual enhancements */
+  --shadow-luxury: 0 10px 30px -15px rgba(0, 118, 190, 0.08);
+  --shadow-luxury-hover: 0 20px 40px -20px rgba(0, 118, 190, 0.15);
+  --shadow-luxury-gold: 0 10px 25px -10px rgba(0, 118, 190, 0.15);
+}
+
+/* Custom styles for luxury glassmorphism background filters and custom scrollbars */
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .glass-card-dark {
+    background: rgba(15, 41, 64, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .text-luxury-gradient-gold {
+    background: linear-gradient(135deg, #0076be 0%, #1ea5fc 50%, #00568c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-luxury-gradient-navy {
+    background: linear-gradient(135deg, #0F2940 0%, #173E60 50%, #0076be 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-luxury-gradient-gold {
+    background: linear-gradient(135deg, #0076be 0%, #1ea5fc 100%);
+  }
+
+  .bg-luxury-gradient-dark {
+    background: linear-gradient(135deg, #0F2940 0%, #071521 100%);
+  }
+
+  .bg-luxury-gradient-soft {
+    background: linear-gradient(180deg, #FAFAF8 0%, #F5F5FA 100%);
+  }
+
+  .bg-luxury-gradient-ivory {
+    background: linear-gradient(135deg, #FFFDF9 0%, #FAFAF8 100%);
+  }
+
+  .border-luxury-gold-soft {
+    border-color: rgba(198, 161, 91, 0.25);
+  }
+}
+
+/* Base resets & styles */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-luxury-bg);
+  color: var(--color-luxury-dark);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Premium micro-animations & layout utilities */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbars matching the luxury dark slate aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAF8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0076be;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0F2940;
+}
